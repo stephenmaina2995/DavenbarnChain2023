@@ -4,12 +4,14 @@ pragma solidity ^0.7.4;
 
 pragma experimental ABIEncoderV2;
 
-contract Twitter {
+// pragma solidity ^0.8.0;
+
+contract Twitter{
 
     uint16 constant MAX_TWEET_LENGTH = 280;
 
-    struct Tweet {
-       address author;
+    struct Tweet{
+        address author;
         string content;
         uint256 timestamp;
         uint256 likes;
