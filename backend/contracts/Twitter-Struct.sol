@@ -16,6 +16,8 @@ contract Twitter {
     mapping(address => Tweet[]) public tweets;
 
     function createTweet(string memory _tweet) public {
+        //
+        require(bytes(_tweet).length <= 280, "Conversation is too long");
 
         Tweet memory newTweet = Tweet({
             author: msg.sender,
